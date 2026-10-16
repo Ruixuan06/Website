@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: todo-list
+    runtime: docker
+    plan: 0.5c-512mb
+    region: singapore
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: TODO_DATABASE
+        value: /app/private-data/todo.sqlite
+    disk:
+      name: todo-data
+      mountPath: /app/private-data
+      sizeGB: 1

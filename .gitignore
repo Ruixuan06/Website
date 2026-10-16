@@ -1,0 +1,5 @@
+node_modules/
+private-data/
+.env*
+*.sqlite*
+.DS_Store
