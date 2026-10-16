@@ -2,13 +2,17 @@
 
 水蓝色的私人共享清单。输入名字即可使用，无需注册。
 
-## 部署
+## 免费部署到 Cloudflare
 
-[Deploy to Render](https://render.com/deploy?repo=https://github.com/Ruixuan06/Website)
+使用 Cloudflare Workers Free + D1，在免费额度内无需月费。
+在 Cloudflare Workers & Pages 连接此 GitHub 仓库，应用名设置为 todo-list。
+预构建资源已包含，Build command 留空，Deploy command 设置为 `npm run deploy`。
+部署脚本创建或复用 todo-list-data 数据库，并应用 migrations/ 中的迁移。
+首次部署期间数据库初始化可能短暂返回 503；迁移完成后才算可用。
+不要选择付费升级；免费额度耗尽时可能暂时不可用。
+中国大陆与美国连通性仍需实际测试，不承诺跨境稳定性。
 
-部署配置使用付费 Web Service 与 1 GB 持久化磁盘。确认平台费用后再提交部署。
-此按钮是部署入口，不是已上线的网址。上线后平台提供 HTTPS 访问地址。
-中国大陆和美国之间的网络连通性需要实际测试，当前不保证两地稳定性。
+原 Render 配置保留供备用，它是付费方案，不属于本次免费部署。
 
 ## 使用
 
